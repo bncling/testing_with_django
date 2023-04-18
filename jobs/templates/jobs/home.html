@@ -141,6 +141,13 @@
     </div>
   </section>
 
+  <p>I'm going to test $\LaTeX$ rendering here: \[ \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
+  \qquad \qquad \text{test} \qquad \qquad \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
+  \qquad \qquad \text{test} \qquad \qquad \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
+  \qquad \qquad \text{test} \qquad \qquad \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
+  \qquad \qquad \text{test} \qquad \qquad \int_{-\infty}^\infty e^{-x^2} \, dx = \sqrt{\pi}
+  \qquad \qquad \text{test} \qquad \qquad  \]</p>
+
   <div class="album py-5 bg-body-tertiary">
     <div class="container">
 
@@ -171,6 +178,86 @@
 	<!-- copy/pasted Bootstrap JavaScript and Popper things -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+
+  <!-- KaTeX auto-render extension -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css" integrity="sha384-Um5gpz1odJg5Z4HAmzPtgZKdTBHZdw8S29IecapCSB31ligYPhHQZMIlWLYQGVoc" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.js" integrity="sha384-YNHdsYkH6gMx9y3mRkmcJ2mFUjTd0qNQQvY9VYZgQd7DcN7env35GzlmFaZ23JGp" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/contrib/auto-render.min.js" integrity="sha384-vZTG03m+2yp6N6BNi5iM4rW4oIwk5DfcNdFfxkk9ZWpDriOkXX8voJBFrAO7MpVl" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+          // customised options
+          // • auto-render specific keys, e.g.:
+          delimiters: [
+              {left: '$$', right: '$$', display: true},
+              {left: '$', right: '$', display: false},
+              {left: '\\(', right: '\\)', display: false},
+              {left: '\\[', right: '\\]', display: true}
+          ],
+          macros: {
+            "\\Ts": "\\mathcal{T}_{\\text{std}}",
+            "\\R":"\\mathbb{R}",
+            "\\N":"\\mathbb{N}",
+            "\\Z":"\\mathbb{Z}",
+            "\\Q":"\\mathbb{Q}",
+            "\\F":"\\mathbb{F}",
+            "\\C":"\\mathbb{C}",
+            "\\Even":"\\mathbb{E}",
+            "\\Odd":"\\mathbb{O}",
+            "\\Poly":"\\mathcal{P}",
+            "\\st":"\\text{ s.t. }",
+            "\\T":"\\mathcal{T}",
+            "\\Ts":"\\mathcal{T}_\\text{std}",
+            "\\Rs":"\\mathbb{R}_\\text{std}",
+            "\\inv":"^{-1}",
+            "\\dg":"\\^{circ}",
+            "\\B":"\\mathscr{B}",
+            "\\BLL":"\\mathcal{B}_\\text{LL}",
+            "\\RLL":"\\mathbb{R}_\\text{LL}",
+            "\\TLL":"\\mathcal{T}_\\text{LL}",
+            "\\Rh":"\\mathbb{R}_\\text{har}",
+            "\\Hbub":"\\mathbb{H}_\\text{bub}",
+            "\\Zar":"\\mathbb{Z}_\\text{arith}",
+            "\\lcm":"\\text{lcm}",
+            "\\Sub":"\\mathscr{S}",
+            "\\Cl":"\\text{Cl}",
+            "\\Span":"\\text{span}",
+            "\\Lin":"\\mathcal{L}",
+            "\\nl":"\\text{null }",
+            "\\range":"\\text{range }",
+            "\\M":"\\mathcal{M}",
+            "\\Sym":"\\text{Sym}",
+            "\\Aut":"\\text{Aut}",
+            "\\im":"\\text{im}",
+            "\\inn":"\\text{Inn}",
+            "\\id":"\\text{id}",
+            "\\stirlingI":"\\genfrac{[}{]}{0pt}{}{#1}{#2}",
+            "\\stirlingII":"\\genfrac{\\{}{\\}}{0pt}{}{#1}{#2}",
+            "\\Cov":"\\mathscr{C}",
+            "\\im":"\\text{im}",
+            "\\pring":"{#1}[{#2}]",
+            "\\V":"\\mathbf{V}",
+            "\\I":"\\mathbf{I}",
+            "\\Tor":"\\mathbb{T}",
+            "\\Sp":"\\mathbb{S}",
+            "\\RP":"\\mathbb{R}\\text{P}"
+          },
+          // • rendering keys, e.g.:
+          throwOnError : false
+        });
+    });
+</script>
+
+<!-- styling for the KaTeX -->
+<style>
+  .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+  .katex {
+      font: normal 1.15em KaTeX_Main,Times New Roman,serif;
+  }
+</style>
       
   </body>
 </html>
